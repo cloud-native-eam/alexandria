@@ -1,3 +1,0 @@
-settings:
-  # configure gloo to write generated custom resources to a custom namespace
-  writeNamespace: alexandria

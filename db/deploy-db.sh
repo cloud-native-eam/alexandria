@@ -11,3 +11,5 @@ kubectl apply -f https://raw.githubusercontent.com/arangodb/kube-arangodb/${VERS
 
 # Install Production DB
 # kubectl apply -f production.yaml
+
+https://192.168.64.5:16443/api/v1/namespaces/default/services/alexandria-db/proxy/dashboard/
