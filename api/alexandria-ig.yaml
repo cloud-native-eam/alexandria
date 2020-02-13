@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: alexandria-api
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    traefik.frontend.rule.type: PathPrefixStrip
+spec:
+  rules:
+  - host: alexandria.minikube
+    http:
+      paths:
+      - path: /api-ui
+        backend:
+          serviceName: alexandria-api-web-ui
+          servicePort: 80
+      - path: /v1/web/app
+        backend:
+          serviceName: ax-web-app
+          servicePort: http
+      - path: /v1/ingest/k8s
+        backend:
+          serviceName: ax-k8s-ingest
+          servicePort: http
+      - path: /v1/backend/alexandria
+        backend:
+          serviceName: ax-central-service
+          servicePort: http
