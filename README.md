@@ -10,5 +10,5 @@ A cloud native tool for managing the enterprise architecture.
     * then `kubectl apply -f ./db/development.yaml`
     * You can reach the DB GUI via https://<`VM-IP`>:32742
     * use `root` as user with an empty password and change it soon
-4. SPin Up API Gateway - Traefik
+4. Spin Up API Gateway - Traefik
 
