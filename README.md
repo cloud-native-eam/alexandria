@@ -11,7 +11,5 @@ A cloud native tool for managing the enterprise architecture.
     * You can reach the DB GUI via https://<`VM-IP`>:32742
     * use `root` as user with an empty password and change it soon
 4. Spin Up API Gateway - Traefik
-    *  'helm repo add api https://github.com/containous/traefik-helm-chart/'
-    *  'helm repo update' 
-    *  'helm install api/traefik'
+    *  'helm install ./api/traefik'
 

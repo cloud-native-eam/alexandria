@@ -81,13 +81,13 @@ dashboard:
 logs:
   loglevel: WARN
 #
-resources:
-  requests:
-    cpu: "100m"
-    memory: "100Mi"
-  limits:
-    cpu: "500m"
-    memory: "500Mi"
+resources: {}
+  # requests:
+  #   cpu: "100m"
+  #   memory: "50Mi"
+  # limits:
+  #   cpu: "300m"
+  #   memory: "150Mi"
 affinity: {}
 nodeSelector: {}
 tolerations: []
