@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/docs/architecture/alexandria/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/architecture/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/architecture/pharos/aws/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/devenv/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/writing-docs/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/architecture/pharos/k8s/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/architecture/pharos/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/architecture/datamodel/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+  </url>
+  
+</urlset>
