@@ -9,6 +9,7 @@ A cloud native tool for managing the enterprise architecture.
     * execute the ./db/deploy-db.sh and wait till all pods are up
     * then `kubectl apply -f ./db/development.yaml`
     * You can reach the DB GUI via https://<`VM-IP`>:<`service/alexandria-db-ea`>
+    * `https://192.168.64.5:30696/_db/_system/_admin/aardvark/index.html#login`
     * use `root` as user with an empty password and change it soon
 4. Spin Up API Gateway - Traefik
     *  'helm install ./api/traefik'

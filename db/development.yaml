@@ -2,7 +2,7 @@ apiVersion: "database.arangodb.com/v1alpha"
 kind: "ArangoDeployment"
 metadata:
   name: "alexandria-db"
-  #namespace: alexandria-db
+  #namespace: axdb
   labels:
     environment: development
     app: alexandria
