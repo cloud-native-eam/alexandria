@@ -1,4 +1,7 @@
 # Alexandria
+[![Netlify Status](https://api.netlify.com/api/v1/badges/16c88884-3a57-4823-bcfe-89f527c62e2e/deploy-status)](https://app.netlify.com/sites/competent-elion-26fee3/deploys)
+
+[Documentation](https://competent-elion-26fee3.netlify.com/)
 
 A cloud native tool for managing the enterprise architecture.
 
