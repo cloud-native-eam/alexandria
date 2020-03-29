@@ -2,7 +2,7 @@ baseURL = "https://cloud-native-eam.github.io/alexandria/"
 languageCode = "en-us"
 title = "Alexandria Documentation"
 theme = "book"
-publishDir = "docs"
+publishDir = "../../docs"
 
 [markup]
 [markup.goldmark.renderer]
