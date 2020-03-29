@@ -2,7 +2,7 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Alexandria Documentation"
 theme = "book"
-publishDir = "docs"
+publishDir = "public"
 
 [markup]
 [markup.goldmark.renderer]
