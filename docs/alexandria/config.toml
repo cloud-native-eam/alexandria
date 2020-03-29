@@ -1,4 +1,4 @@
-baseURL = "https://cloud-native-eam.github.io/alexandria/"
+baseURL = "/"
 languageCode = "en-us"
 title = "Alexandria Documentation"
 theme = "book"
