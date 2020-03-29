@@ -1,5 +1,5 @@
 [build]
-publish = "docs/public"
+publish = "docs/public/"
 command = "hugo --gc --minify"
 
 [context.production.environment]
