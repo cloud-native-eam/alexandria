@@ -9,5 +9,5 @@ metadata:
     type: db
 spec:
   mode: Cluster
-  image: arangodb/arangodb:3.5.2
+  image: arangodb/arangodb:3.6.2
   environment: Production
