@@ -7,42 +7,18 @@ spec:
     spec:
       containers:
       - name: adb-init
-        image: perl
+        image: busybox
         command: ["sh scripts.sh"]
         volumeMounts:
-          - name: ax-admin
+          - name: axdb-root-password
             mountPath: "/etc/admin"
             readOnly: true
-          - name: k8s-ing
-            mountPath: "/etc/k8s"
-            readOnly: true
-          - name: aws-ing
-            mountPath: "/etc/aws"
-            readOnly: true
       volumes:
-      - name: ax-admin
+      - name: axdb-root-password
         secret:
-          secretName: ax-admin
+          secretName: alexandria-db-root-password
           items:
-          - key: username
-            path: adb/ax-admin
           - key: password
-            path: adb/ax-admin
-      - name: k8s-ing
-        secret:
-          secretName: k8s-pharos-ing
-          items:
-          - key: username
-            path: adb/k8s-ing
-          - key: password
-            path: adb/k8s-ing
-      - name: aws-ing
-        secret:
-          secretName: aws-pharos-ing
-          items:
-          - key: username
-            path: adb/aws-ing
-          - key: password
-            path: adb/aws-ing
+            path: pwd
       restartPolicy: Never
   backoffLimit: 4
