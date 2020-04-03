@@ -42,8 +42,14 @@ func main() {
 		fmt.Println(err)
 	}
 
-	addUserToDb, err := c.User.SetDatabaseAccess(ctx, "axdb", ReadWrite)
+	addUserToDb, err := c.User(ctx, "ingest")
+	axdb, err := c.Database(ctx, "axdb")
+	addDbUser := addUserToDb.GrantReadWriteAccess(ctx, axdb)
+	addUserToDb, err = c.User(ctx, "ax-admin")
+	addDbUser = addUserToDb.GrantReadWriteAccess(ctx, axdb)
 
 	fmt.Println(createUser)
 	fmt.Println(createdb)
+	fmt.Println(addUserToDb)
+	fmt.Println(addDbUser)
 }
