@@ -15,18 +15,18 @@ import (
 func main() {
 	//new connection
 	conn, err := http.NewConnection(http.ConnectionConfig{
-		Endpoints: []string{"https://192.168.64.5:32100"},
-		// Endpoints: []string{"https://alexandria-db:8529"},
+		Endpoints: []string{"https://alexandria-db:8529"},
 		TLSConfig: &tls.Config{InsecureSkipVerify: true},
 	})
 	if err != nil {
 		fmt.Println(err)
 	}
 	// new client to connect to ADB
-	ingestPw := os.Getenv("INGEST-PW")
+	rootUser := os.Getenv("ROOT-USER")
+	rootUserPW := os.Getenv("ROOT-PW")
 	c, err := driver.NewClient(driver.ClientConfig{
 		Connection:     conn,
-		Authentication: driver.BasicAuthentication("test", "test"),
+		Authentication: driver.BasicAuthentication(rootUser, rootUserPW),
 	})
 	if err != nil {
 		fmt.Println(err)
