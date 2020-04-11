@@ -2,11 +2,15 @@ apiVersion: "database.arangodb.com/v1alpha"
 kind: "ArangoDeployment"
 metadata:
   name: "alexandria-db"
-  #namespace: alexandria-db
+  namespace: axdb
   labels:
     environment: development
     app: alexandria
     type: db
 spec:
   mode: Single
-  image: arangodb/arangodb:3.5.2
+  image: arangodb/arangodb:3.6.2
+  environment: Development
+  bootstrap:
+    passwordSecretNames:
+      root: Auto

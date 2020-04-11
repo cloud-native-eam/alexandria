@@ -1,0 +1,59 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: adb-init
+  namespace: axdb
+spec:
+  template:
+    spec:
+      containers:
+      - name: adb-init
+        image: alexandriaeam/axdb-init:0.0.2
+        imagePullPolicy: Always
+        volumeMounts:
+        - name: axdb-init-pw
+          mountPath: /root/axpw
+          readOnly: true
+        - name: alexandria-db-root-password
+          mountPath: /root/axroot
+          readOnly: true
+        env:
+          - name: INGEST-PW
+            valueFrom:
+              secretKeyRef:
+                name: axdb-init-pw
+                key: ingest-pw
+          - name: ADMIN-PW
+            valueFrom:
+              secretKeyRef:
+                name: axdb-init-pw
+                key: admin-pw
+          - name: ROOT-PW
+            valueFrom:
+              secretKeyRef:
+                name: alexandria-db-root-password
+                key: password
+          - name: ROOT-USER
+            valueFrom:
+              secretKeyRef:
+                name: alexandria-db-root-password
+                key: username
+      volumes:
+      - name: axdb-init-pw
+        secret:
+          secretName: axdb-init-pw
+          items:
+            - key: admin-pw
+              path: admin.json
+            - key: ingest-pw
+              path: ingest.json
+      - name: alexandria-db-root-password
+        secret:
+          secretName: alexandria-db-root-password
+          items:
+            - key: password
+              path: pw.json
+            - key: username
+              path: user.json
+      restartPolicy: Never
+  backoffLimit: 4
