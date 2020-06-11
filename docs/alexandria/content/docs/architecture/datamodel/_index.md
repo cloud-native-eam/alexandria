@@ -1,6 +1,6 @@
 ---
 title: Datamodel
-weight: 3
+weight: 2
 bookToc: true
 ---
 
