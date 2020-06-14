@@ -17,59 +17,52 @@ To keep docs short we will use abbreviation for the categories starting with an 
 |  Connection	|  from	| to |  Information attached	| Description|
 |-	|-	|-	|-	|- |
 | consists of 	| ABO 	|  ABO	|  	| An organization can have multiple layers, the `consist of` explains this breakdown 	|
-|  belongs to	|  ABC	| ABO 	|  	|  	|
-|  	|  	|  	|  	|  	|
+|  served by	|  APA	| ABO 	|  	| Responsible BO for the Application/Product (not who use it!) |
+|  belongs to	|  ABC	| ABO 	|  	| Which BC is done by which BO	|
+|  contracts	|  ABO	| AV 	|  	| Close contract to deliver/serve/develop/operate a component/technology/platform 	|
 
 ## Business Capability (ABC)
 |  Connection	|  from	| to |  Information attached	| Description|
 |-	|-	|-	|-	|- |
 | consists of 	| ABC 	|  ABC	|  	| An business capability can have multiple layers, the `consist of` explains this breakdown 	|
-|  belongs to	|  ABC	| ABO 	|  	|  	|
-|  	|  	|  	|  	|  	|
+|  belongs to	|  ABC	| ABO 	|  	| Which BC is done by which BO 	|
+|  fulfills	|  APA	| ABC 	|  	| BC is solved by application/product	|
 
 ## Product (Application) (APA)
 |  Connection	|  from	| to |  Information attached	| Description|
 |-	|-	|-	|-	|- |
-| fulfills 	| APA 	|  ABO	|  	|  	|
-|  implements	|  AC	| APA 	|  	|  	|
-| serves 	| ATS 	| APA 	|  	|  	|
-| runs on 	| APA 	| AP 	|  	|  	|
+| fulfills 	| APA 	|  ABO	|  	| BC is solved by application/product 	|
+| serves 	| AC 	| APA 	|  	| One or multiple components serves or getting abstract as a Product/application 	|
+| runs on 	| APA 	| AP 	|  	| A Product/Application must be hosted on some infrastructure/platform 	|
+| served by 	| APA 	| ABO 	|  	|  Responsible BO for the Application/Product (not who use it!) 	|
 
 ## Component (AC)
 |  Connection	|  from	| to |  Information attached	| Description|
 |-	|-	|-	|-	|- |
-| implements 	| AC 	|  APA	|  	|  	|
-|  implements	|  AC	| ATS 	|  	|  	|
-|  consists of	|  AC	|  AT	|  	|  	|
-
-## (Technical) Service (ATS)
-|  Connection	|  from	| to |  Information attached	| Description|
-|-	|-	|-	|-	|- |
-| serves 	| ATS 	|  APA	|  	|  	|
-|  consits of	|  ATS	| AT 	|  	|  	|
-|  runs on	|  ATS	|  AP	|  	|  	|
-|  implements	|  AC	| ATS 	|  	|  	|
-|  offers	|  AV	|  ATS	|  	|  	|
+| serves 	| AC 	|  APA	|  	| One or multiple components serves or getting abstract as a Product/application	|
+|  consits of	|  AC	| AT 	|  	| Logically abstractes a technology to a usable service 	|
+|  runs on	|  AC	|  AP	|  	|  A service needs to run on an internal/external platform or as a SaaS	|
+|  offers	|  AV	|  AC	|  	| Enterprise services for a component like Docker EE 	|
 
 ## Technology (AT)
 |  Connection	|  from	| to |  Information attached	| Description|
 |-	|-	|-	|-	|- |
-| consists of 	| AP 	|  AT	|  	|  	|
-|  consists of	|  ATS	| AT 	|  	|  	|
-|  consists of	|  AC	|  AT	|  	|  	|
-|  develop	|  AV	|  AT	|  	|  	|
+| consists of 	| AP 	|  AT	|  	| If it's a known/internal platform, the tech stack is available	|
+|  consists of	|  AC	|  AT	|  	| Logically abstracted by a component	|
+|  develop	|  AV	|  AT	|  	| Is developed by a vendor	|
 
 ## Platform (AP)
 |  Connection	|  from	| to |  Information attached	| Description|
 |-	|-	|-	|-	|- |
-| consists of 	| AP 	|  AT	|  	|  	|
-|  runs on	|  APA	| AP 	|  	|  	|
-|  runs on	|  ATS	|  AP	|  	|  	|
-|  operate	|  AV	|  AP	|  	|  	|
+| consists of 	| AP 	|  AT	|  	| If it's a known/internal platform, the tech stack is available	|
+|  runs on	|  APA	| AP 	|  	| A Product must be hosted on some infrastructure/platform	|
+|  runs on	|  AC	|  AP	|  	| A service needs to run on an internal/external platform or as a SaaS	|
+|  operate	|  AV	|  AP	|  	| Is offered by/responsible for the operation of a platform and bound to resposnibilities via an SLA 	|
 
 ## Vendor (AV)
 |  Connection	|  from	| to |  Information attached	| Description|
 |-	|-	|-	|-	|- |
-| offers 	| AV 	|  ATS	|  	|  	|
-|  develop	|  AV	| AT 	|  	|  	|
-|  operate	|  AV	|  AP	|  	|  	|
+| offers 	| AV 	|  AC	|  	| Enterprise services for a component like Docker EE	|
+|  develop	|  AV	| AT 	|  	| Develops a specific technology	|
+|  operate	|  AV	|  AP	|  	| Offers/is responsible for the operation of a platform and bound to resposnibilities via an SLA 	|
+|  contracts	|  ABO	| AV 	|  	| Close contract to deliver/serve/develop/operate a component/technology/platform 	|
